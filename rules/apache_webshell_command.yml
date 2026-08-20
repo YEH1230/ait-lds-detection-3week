@@ -1,0 +1,33 @@
+title: Webshell Command in HTTP Query
+id: 005e6bf9-f9ac-4be3-91e7-f32a71637a33
+status: experimental
+description: Detects a command parameter sent to the uploaded evil.php webshell in the AIT-LDS scenario.
+author: Agentic SOC Detection Team
+date: 2026-08-21
+references:
+    - https://zenodo.org/records/3723083
+logsource:
+    category: webserver
+    product: apache
+    service: access
+detection:
+    selection_path:
+        url.path|endswith: '/static/evil.php'
+    selection_command:
+        url.query|contains: 'cmd='
+    condition: selection_path and selection_command
+fields:
+    - source.ip
+    - url.original
+    - user_agent.original
+falsepositives:
+    - Deliberate security testing against a disposable webshell
+level: critical
+tags:
+    - attack.persistence
+    - attack.t1505.003
+    - attack.execution
+    - attack.t1059.004
+x_aitlds_labels:
+    - mail-curl
+

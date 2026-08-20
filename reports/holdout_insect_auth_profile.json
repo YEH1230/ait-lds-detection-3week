@@ -1,0 +1,57 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.insect.com/auth.log",
+    "labels": "data/aitlds_sample/labels/mail.insect.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "total": 1134,
+  "parse_failures": 0,
+  "parse_failure_examples": [],
+  "label_counts": {
+    "0": 956,
+    "hydra": 178
+  },
+  "top_features_by_label": {
+    "0": {
+      "action": [
+        [
+          "session_opened",
+          461
+        ],
+        [
+          "session_closed",
+          461
+        ],
+        [
+          "authentication_failure",
+          34
+        ]
+      ],
+      "auth_service": [
+        [
+          "cron",
+          922
+        ],
+        [
+          "dovecot",
+          34
+        ]
+      ]
+    },
+    "hydra": {
+      "action": [
+        [
+          "authentication_failure",
+          178
+        ]
+      ],
+      "auth_service": [
+        [
+          "dovecot",
+          178
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "input": {
+    "log": "3week/data/aitlds_sample/data/mail.cup.com/auth.log",
+    "labels": "3week/data/aitlds_sample/labels/mail.cup.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "total": 1224,
+  "parse_failures": 0,
+  "label_counts": {
+    "0": 938,
+    "hydra": 286
+  },
+  "top_features_by_label": {
+    "0": {
+      "action": [
+        [
+          "session_opened",
+          455
+        ],
+        [
+          "session_closed",
+          455
+        ],
+        [
+          "authentication_failure",
+          28
+        ]
+      ],
+      "auth_service": [
+        [
+          "cron",
+          910
+        ],
+        [
+          "dovecot",
+          28
+        ]
+      ]
+    },
+    "hydra": {
+      "action": [
+        [
+          "authentication_failure",
+          286
+        ]
+      ],
+      "auth_service": [
+        [
+          "dovecot",
+          286
+        ]
+      ]
+    }
+  }
+}

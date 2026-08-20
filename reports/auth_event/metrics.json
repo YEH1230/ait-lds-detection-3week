@@ -1,0 +1,349 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.cup.com/auth.log",
+    "labels": "data/aitlds_sample/labels/mail.cup.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "processed_events": 1224,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 938,
+    "hydra": 286
+  },
+  "overall": {
+    "tp": 286,
+    "fp": 28,
+    "fn": 0,
+    "tn": 910,
+    "precision": 0.910828025477707,
+    "recall": 1.0,
+    "f1": 0.9533333333333334,
+    "false_positive_rate": 0.029850746268656716
+  },
+  "per_rule": {
+    "1baf9f4f-a76b-49f6-b287-831c1eab07b2": {
+      "title": "Dovecot Authentication Failure",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 286,
+      "fp": 28,
+      "fn": 0,
+      "tn": 910,
+      "precision": 0.910828025477707,
+      "recall": 1.0,
+      "f1": 0.9533333333333334,
+      "false_positive_rate": 0.029850746268656716
+    }
+  },
+  "runtime_seconds": 0.03732309999941208,
+  "events_per_second": 32794.70354872132,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 49,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 07:22:00 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sunni rhost=127.0.0.1  user=sunni"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 50,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 07:22:09 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sunni rhost=127.0.0.1  user=sunni"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 57,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 08:25:17 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=maile rhost=127.0.0.1  user=maile"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 58,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 08:25:24 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=maile rhost=127.0.0.1  user=maile"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 101,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 15:22:55 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=danette rhost=127.0.0.1  user=danette"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 102,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 15:23:04 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=danette rhost=127.0.0.1  user=danette"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 103,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 15:38:34 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=daryl rhost=127.0.0.1  user=daryl"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 104,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 15:38:42 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=daryl rhost=127.0.0.1  user=daryl"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 125,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 19:08:29 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sunni rhost=127.0.0.1  user=sunni"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 126,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 19:08:37 mail-0 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sunni rhost=127.0.0.1  user=sunni"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 375,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 10:57:36 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=della rhost=127.0.0.1  user=della"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 376,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 10:57:44 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=della rhost=127.0.0.1  user=della"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 407,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 15:51:41 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=kelsey rhost=127.0.0.1  user=kelsey"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 408,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 15:51:49 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=kelsey rhost=127.0.0.1  user=kelsey"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 541,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 13:35:36 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=irwin rhost=127.0.0.1  user=irwin"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 542,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 13:35:44 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=irwin rhost=127.0.0.1  user=irwin"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 547,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 14:10:19 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=trula rhost=127.0.0.1  user=trula"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 548,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 14:10:27 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=trula rhost=127.0.0.1  user=trula"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 587,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 20:31:19 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=karri rhost=127.0.0.1  user=karri"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/auth.log",
+      "line_no": 588,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 20:31:27 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=karri rhost=127.0.0.1  user=karri"
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.insect.com/apache2/mail.insect.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "processed_events": 169340,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 162852,
+    "nikto": 6296,
+    "hydra": 186,
+    "upload": 5,
+    "mail-curl": 1
+  },
+  "overall": {
+    "tp": 6482,
+    "fp": 0,
+    "fn": 6,
+    "tn": 162852,
+    "precision": 1.0,
+    "recall": 0.999075215782984,
+    "f1": 0.9995373939861218,
+    "false_positive_rate": 0.0
+  },
+  "per_rule": {
+    "c6b3607b-f743-4f75-a090-d12f8e8c7521": {
+      "title": "Automated Horde Webshell Upload Sequence",
+      "target_labels": [
+        "upload"
+      ],
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 169335,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17": {
+      "title": "Apache Hydra Login Client",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 180,
+      "fp": 0,
+      "fn": 6,
+      "tn": 169154,
+      "precision": 1.0,
+      "recall": 0.967741935483871,
+      "f1": 0.9836065573770492,
+      "false_positive_rate": 0.0
+    },
+    "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad": {
+      "title": "Apache Nikto Scanner Activity",
+      "target_labels": [
+        "nikto"
+      ],
+      "tp": 6296,
+      "fp": 0,
+      "fn": 0,
+      "tn": 163044,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "005e6bf9-f9ac-4be3-91e7-f32a71637a33": {
+      "title": "Webshell Command in HTTP Query",
+      "target_labels": [
+        "mail-curl"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 169339,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "runtime_seconds": 10.731956800000262,
+  "events_per_second": 15779.042271209652,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125500,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:15:57 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125504,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:16:02 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125505,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:16:03 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125515,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:16:04 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125519,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:16:05 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 125520,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:14:16:06 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

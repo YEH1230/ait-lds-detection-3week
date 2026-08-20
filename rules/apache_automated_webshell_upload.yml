@@ -1,0 +1,38 @@
+title: Automated Horde Webshell Upload Sequence
+id: c6b3607b-f743-4f75-a090-d12f8e8c7521
+status: experimental
+description: Detects the Python Requests client used during the AIT-LDS Horde webshell upload sequence.
+author: Agentic SOC Detection Team
+date: 2026-08-21
+references:
+    - https://nvd.nist.gov/vuln/detail/CVE-2019-9858
+    - https://zenodo.org/records/3723083
+logsource:
+    category: webserver
+    product: apache
+    service: access
+detection:
+    selection_agent:
+        user_agent.original|startswith: 'python-requests/'
+    selection_path:
+        url.path:
+            - '/login.php'
+            - '/turba/add.php'
+            - '/static/evil.php'
+    condition: selection_agent and selection_path
+fields:
+    - source.ip
+    - http.request.method
+    - url.original
+    - user_agent.original
+falsepositives:
+    - Legitimate automation that uses Python Requests against the same endpoints
+level: high
+tags:
+    - attack.initial-access
+    - attack.t1190
+    - attack.persistence
+    - attack.t1505.003
+x_aitlds_labels:
+    - upload
+

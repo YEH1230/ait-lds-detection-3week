@@ -1,0 +1,32 @@
+title: Apache Hydra Login Client
+id: 28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17
+status: experimental
+description: Detects Hydra's identifying user agent while it requests the Horde login endpoint.
+author: Agentic SOC Detection Team
+date: 2026-08-21
+references:
+    - https://zenodo.org/records/3723083
+logsource:
+    category: webserver
+    product: apache
+    service: access
+detection:
+    selection_path:
+        url.path: '/login.php'
+    selection_agent:
+        user_agent.original|contains: 'Hydra'
+    condition: selection_path and selection_agent
+fields:
+    - source.ip
+    - http.request.method
+    - url.path
+    - user_agent.original
+falsepositives:
+    - Authorized penetration tests using Hydra without changing its user agent
+level: high
+tags:
+    - attack.credential-access
+    - attack.t1110
+x_aitlds_labels:
+    - hydra
+

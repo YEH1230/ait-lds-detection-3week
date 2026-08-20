@@ -1,0 +1,382 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.cup.com/apache2/mail.cup.com-access.log",
+    "log_type": "apache",
+    "label_policy": "time"
+  },
+  "processed_events": 148534,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 141745,
+    "nikto": 6300,
+    "hydra": 405,
+    "webshell-netstat-nau": 42,
+    "vrfy": 8,
+    "webshell-netstat-t": 8,
+    "upload": 7,
+    "mail-curl": 3,
+    "webshell-cd-home": 3,
+    "webshell-netstat-nat": 2,
+    "webshell-id": 2,
+    "webshell-date": 2,
+    "webshell-whoami": 1,
+    "webshell-ps-aux": 1,
+    "webshell-netstat-natp": 1,
+    "webshell-wget-eximsploitsh": 1,
+    "webshell-w": 1,
+    "webshell-cat-passwd": 1,
+    "webshell-last": 1
+  },
+  "overall": {
+    "tp": 6589,
+    "fp": 0,
+    "fn": 200,
+    "tn": 141745,
+    "precision": 1.0,
+    "recall": 0.9705405803505671,
+    "f1": 0.9850500822245478,
+    "false_positive_rate": 0.0
+  },
+  "per_rule": {
+    "c6b3607b-f743-4f75-a090-d12f8e8c7521": {
+      "title": "Automated Horde Webshell Upload Sequence",
+      "target_labels": [
+        "upload"
+      ],
+      "tp": 5,
+      "fp": 0,
+      "fn": 2,
+      "tn": 148527,
+      "precision": 1.0,
+      "recall": 0.7142857142857143,
+      "f1": 0.8333333333333333,
+      "false_positive_rate": 0.0
+    },
+    "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17": {
+      "title": "Apache Hydra Login Client",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 288,
+      "fp": 0,
+      "fn": 117,
+      "tn": 148129,
+      "precision": 1.0,
+      "recall": 0.7111111111111111,
+      "f1": 0.8311688311688311,
+      "false_positive_rate": 0.0
+    },
+    "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad": {
+      "title": "Apache Nikto-Style Malformed Request",
+      "target_labels": [
+        "nikto"
+      ],
+      "tp": 6295,
+      "fp": 0,
+      "fn": 5,
+      "tn": 142234,
+      "precision": 1.0,
+      "recall": 0.9992063492063492,
+      "f1": 0.999603017070266,
+      "false_positive_rate": 0.0
+    },
+    "005e6bf9-f9ac-4be3-91e7-f32a71637a33": {
+      "title": "Webshell Command in HTTP Query",
+      "target_labels": [
+        "mail-curl"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "tn": 148531,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "false_positive_rate": 0.0
+    },
+    "1baf9f4f-a76b-49f6-b287-831c1eab07b2": {
+      "title": "Dovecot Authentication Failure",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "runtime_seconds": 7.730420300000333,
+  "events_per_second": 19214.220473884663,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 118863,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:18:41 +0000] \"GET /nag/task.php?actionID=add_task HTTP/1.1\" 200 9207 \"http://mail.cup.com/nag/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 118889,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:18:41 +0000] \"GET /js/form_sections.js?v=dc442439853f80a9467ce727c08e9b0e HTTP/1.1\" 200 947 \"http://mail.cup.com/nag/task.php?actionID=add_task\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 118894,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:18:41 +0000] \"GET /nag/js/calendar.js?v=839a6380454bbd865d6aa6063c84bc2b HTTP/1.1\" 200 1306 \"http://mail.cup.com/nag/task.php?actionID=add_task\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 118900,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:18:41 +0000] \"GET /nag/js/task.js?v=839a6380454bbd865d6aa6063c84bc2b HTTP/1.1\" 200 1022 \"http://mail.cup.com/nag/task.php?actionID=add_task\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121582,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:18:46 +0000] \"GET /services/portal/ HTTP/1.1\" 200 12205 \"http://mail.cup.com/nag/list.php\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121814,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:51 +0000] \"GET /imp/themes/default/graphics/checkbox_on.png HTTP/1.1\" 200 745 \"http://mail.cup.com/imp/themes/default/dynamic/screen.css\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121815,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:51 +0000] \"GET /imp/themes/default/graphics/delete.png HTTP/1.1\" 200 581 \"http://mail.cup.com/imp/themes/default/dynamic/screen.css\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121816,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:51 +0000] \"POST /services/ajax.php/imp/showMessage HTTP/1.1\" 200 2484 \"http://mail.cup.com/imp/dynamic.php?page=mailbox\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121817,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:51 +0000] \"GET /imp/themes/default/graphics/plus.png HTTP/1.1\" 200 753 \"http://mail.cup.com/imp/themes/default/dynamic/screen.css\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121818,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:51 +0000] \"GET /imp/themes/default/graphics/print.png HTTP/1.1\" 200 618 \"http://mail.cup.com/imp/themes/default/screen.css\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121819,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:54 +0000] \"POST /services/ajax.php/imp/deleteMessages HTTP/1.1\" 200 559 \"http://mail.cup.com/imp/dynamic.php?page=mailbox\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121820,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:21:54 +0000] \"GET /imp/themes/default/graphics/flags/deleted.png HTTP/1.1\" 200 442 \"http://mail.cup.com/imp/themes/default/screen.css\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 121821,
+      "label": {
+        "time_window": "vrfy",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "vrfy",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:21:54 +0000] \"POST /services/ajax.php/kronolith/saveEvent HTTP/1.1\" 200 650 \"http://mail.cup.com/kronolith/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122031,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:25:46 +0000] \"GET /nag/ HTTP/1.1\" 200 8371 \"http://mail.cup.com/services/portal/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122040,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:25:52 +0000] \"POST /turba/add.php HTTP/1.1\" 302 489 \"http://mail.cup.com/turba/add.php\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122041,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:25:52 +0000] \"GET /turba/contact.php?source=-KrfOwxmgb_30de_2Xv1YAC&key=noOBrhYp4yCd8WMowkkIc9s&view=Contact HTTP/1.1\" 200 21138 \"http://mail.cup.com/turba/add.php\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122042,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:25:52 +0000] \"POST /services/ajax.php/horde/imple?token=PMc8LXSdsyfaZl0eNNagMJw&app=nag&imple=Nag_Ajax_Imple_TagAutoCompleter&input=tags HTTP/1.1\" 200 376 \"http://mail.cup.com/nag/task.php?actionID=add_task\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122043,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:25:50 +0000] \"GET /services/portal/ HTTP/1.1\" 200 9832 \"http://mail.cup.com/imp/dynamic.php?page=mailbox\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122044,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.4 - - [04/Mar/2020:19:25:53 +0000] \"GET /services/portal/ HTTP/1.1\" 200 8527 \"http://mail.cup.com/mnemo/list.php\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122050,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "0",
+        "policy": "time",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.190 - - [04/Mar/2020:19:26:00 +0000] \"GET /nag/ HTTP/1.1\" 200 9154 \"http://mail.cup.com/services/portal/\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0\""
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

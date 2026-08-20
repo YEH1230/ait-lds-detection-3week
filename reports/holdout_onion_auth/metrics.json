@@ -1,0 +1,349 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.onion.com/auth.log",
+    "labels": "data/aitlds_sample/labels/mail.onion.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "processed_events": 1050,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 956,
+    "hydra": 94
+  },
+  "overall": {
+    "tp": 94,
+    "fp": 22,
+    "fn": 0,
+    "tn": 934,
+    "precision": 0.8103448275862069,
+    "recall": 1.0,
+    "f1": 0.8952380952380952,
+    "false_positive_rate": 0.02301255230125523
+  },
+  "per_rule": {
+    "1baf9f4f-a76b-49f6-b287-831c1eab07b2": {
+      "title": "Dovecot Authentication Failure",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 94,
+      "fp": 22,
+      "fn": 0,
+      "tn": 934,
+      "precision": 0.8103448275862069,
+      "recall": 1.0,
+      "f1": 0.8952380952380952,
+      "false_positive_rate": 0.02301255230125523
+    }
+  },
+  "runtime_seconds": 0.031115699999645585,
+  "events_per_second": 33745.02260954951,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 273,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 18:22:28 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 274,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 18:22:36 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 281,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:24:54 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 282,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:25:03 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 315,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 00:46:27 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=ok rhost=127.0.0.1  user=ok"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 316,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 00:46:34 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=ok rhost=127.0.0.1  user=ok"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 373,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 09:49:02 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=kam rhost=127.0.0.1  user=kam"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 374,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 09:49:11 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=kam rhost=127.0.0.1  user=kam"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 433,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 18:51:11 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=leigha rhost=127.0.0.1  user=leigha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 434,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 18:51:19 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=leigha rhost=127.0.0.1  user=leigha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 435,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 18:57:04 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sadye rhost=127.0.0.1  user=sadye"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 436,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 18:57:12 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sadye rhost=127.0.0.1  user=sadye"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 455,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 21:53:45 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=leigha rhost=127.0.0.1  user=leigha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 456,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 21:53:53 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=leigha rhost=127.0.0.1  user=leigha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 537,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 10:42:34 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sadye rhost=127.0.0.1  user=sadye"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 538,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 10:42:42 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=sadye rhost=127.0.0.1  user=sadye"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 839,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  4 19:19:35 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=tressa rhost=127.0.0.1  user=tressa"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 840,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  4 19:19:43 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=tressa rhost=127.0.0.1  user=tressa"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 933,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  5 10:17:43 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/auth.log",
+      "line_no": 934,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  5 10:17:51 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=lacresha rhost=127.0.0.1  user=lacresha"
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

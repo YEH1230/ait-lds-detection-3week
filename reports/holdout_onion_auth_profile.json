@@ -1,0 +1,57 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.onion.com/auth.log",
+    "labels": "data/aitlds_sample/labels/mail.onion.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "total": 1050,
+  "parse_failures": 0,
+  "parse_failure_examples": [],
+  "label_counts": {
+    "0": 956,
+    "hydra": 94
+  },
+  "top_features_by_label": {
+    "0": {
+      "action": [
+        [
+          "session_opened",
+          467
+        ],
+        [
+          "session_closed",
+          467
+        ],
+        [
+          "authentication_failure",
+          22
+        ]
+      ],
+      "auth_service": [
+        [
+          "cron",
+          934
+        ],
+        [
+          "dovecot",
+          22
+        ]
+      ]
+    },
+    "hydra": {
+      "action": [
+        [
+          "authentication_failure",
+          94
+        ]
+      ],
+      "auth_service": [
+        [
+          "dovecot",
+          94
+        ]
+      ]
+    }
+  }
+}

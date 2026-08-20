@@ -1,0 +1,355 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.cup.com/apache2/mail.cup.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "processed_events": 148534,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 141903,
+    "nikto": 6295,
+    "hydra": 329,
+    "upload": 5,
+    "webshell-id": 1,
+    "mail-curl": 1
+  },
+  "overall": {
+    "tp": 6589,
+    "fp": 0,
+    "fn": 42,
+    "tn": 141903,
+    "precision": 1.0,
+    "recall": 0.9936661137083396,
+    "f1": 0.9968229954614221,
+    "false_positive_rate": 0.0
+  },
+  "per_rule": {
+    "c6b3607b-f743-4f75-a090-d12f8e8c7521": {
+      "title": "Automated Horde Webshell Upload Sequence",
+      "target_labels": [
+        "upload"
+      ],
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 148529,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17": {
+      "title": "Apache Hydra Login Client",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 288,
+      "fp": 0,
+      "fn": 41,
+      "tn": 148205,
+      "precision": 1.0,
+      "recall": 0.8753799392097265,
+      "f1": 0.9335494327390599,
+      "false_positive_rate": 0.0
+    },
+    "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad": {
+      "title": "Apache Nikto Scanner Activity",
+      "target_labels": [
+        "nikto"
+      ],
+      "tp": 6295,
+      "fp": 0,
+      "fn": 0,
+      "tn": 142239,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "005e6bf9-f9ac-4be3-91e7-f32a71637a33": {
+      "title": "Webshell Command in HTTP Query",
+      "target_labels": [
+        "mail-curl"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 148533,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "runtime_seconds": 9.006836399999884,
+  "events_per_second": 16491.25102350054,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122079,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:26:06 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122080,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:26:10 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122227,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:48 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122228,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:49 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122231,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:50 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122234,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:51 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122236,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:52 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122237,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:53 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122239,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:54 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122241,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:55 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122242,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:56 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122243,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:57 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122244,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:58 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122245,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:27:59 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122246,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:00 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122281,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:08 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122282,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:11 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122297,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:32 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122305,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:37 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+      "line_no": 122306,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:19:28:38 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

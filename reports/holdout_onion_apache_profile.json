@@ -1,0 +1,350 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.onion.com/apache2/mail.onion.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.onion.com/apache2/mail.onion.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "total": 81963,
+  "parse_failures": 0,
+  "parse_failure_examples": [],
+  "label_counts": {
+    "0": 75565,
+    "nikto": 6295,
+    "hydra": 97,
+    "upload": 5,
+    "mail-curl": 1
+  },
+  "top_features_by_label": {
+    "0": {
+      "method": [
+        [
+          "GET",
+          44025
+        ],
+        [
+          "POST",
+          28920
+        ],
+        [
+          "OPTIONS",
+          2618
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          68524
+        ],
+        [
+          "302",
+          5790
+        ],
+        [
+          "304",
+          1249
+        ],
+        [
+          "408",
+          2
+        ]
+      ],
+      "user_agent": [
+        [
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36",
+          72945
+        ],
+        [
+          "Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)",
+          2618
+        ],
+        [
+          "-",
+          2
+        ]
+      ],
+      "path": [
+        [
+          "/services/portal/",
+          12149
+        ],
+        [
+          "/mnemo/memo.php",
+          5674
+        ],
+        [
+          "/services/ajax.php/kronolith/listEvents",
+          4370
+        ],
+        [
+          "/imp/dynamic.php",
+          3146
+        ],
+        [
+          "/mnemo/",
+          2988
+        ],
+        [
+          "/mnemo/list.php",
+          2837
+        ],
+        [
+          "*",
+          2618
+        ],
+        [
+          "/services/ajax.php/horde/imple",
+          2599
+        ],
+        [
+          "/services/prefs.php",
+          2571
+        ],
+        [
+          "/nag/",
+          2307
+        ],
+        [
+          "/kronolith/",
+          2185
+        ],
+        [
+          "/services/ajax.php/kronolith/listCalendars",
+          2185
+        ]
+      ]
+    },
+    "nikto": {
+      "method": [
+        [
+          "GET",
+          6269
+        ],
+        [
+          "POST",
+          11
+        ],
+        [
+          "OPTIONS",
+          3
+        ],
+        [
+          "TRACE",
+          2
+        ],
+        [
+          "TRACK",
+          2
+        ],
+        [
+          "HEAD",
+          1
+        ],
+        [
+          "PUT",
+          1
+        ],
+        [
+          "DEBUG",
+          1
+        ],
+        [
+          "PROPFIND",
+          1
+        ],
+        [
+          "get",
+          1
+        ],
+        [
+          "INDEX",
+          1
+        ],
+        [
+          "SEARCH",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "400",
+          6295
+        ]
+      ],
+      "user_agent": [
+        [
+          "-",
+          6295
+        ]
+      ],
+      "path": [
+        [
+          "/index.php",
+          160
+        ],
+        [
+          "/",
+          72
+        ],
+        [
+          "/forum1_professionnel.asp",
+          33
+        ],
+        [
+          "/modules.php",
+          31
+        ],
+        [
+          "/forum1.asp",
+          23
+        ],
+        [
+          "/config.php",
+          12
+        ],
+        [
+          "/forum_professionnel.asp",
+          12
+        ],
+        [
+          "/rubrique.asp",
+          12
+        ],
+        [
+          "/forum-ra_professionnel.asp",
+          11
+        ],
+        [
+          "/forum.asp",
+          11
+        ],
+        [
+          "/forum_arc.asp",
+          11
+        ],
+        [
+          "/imprimer.asp",
+          11
+        ]
+      ]
+    },
+    "hydra": {
+      "method": [
+        [
+          "GET",
+          48
+        ],
+        [
+          "POST",
+          48
+        ],
+        [
+          "OPTIONS",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          96
+        ],
+        [
+          "302",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "Mozilla/5.0 (Hydra)",
+          96
+        ],
+        [
+          "Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)",
+          1
+        ]
+      ],
+      "path": [
+        [
+          "/login.php",
+          96
+        ],
+        [
+          "*",
+          1
+        ]
+      ]
+    },
+    "upload": {
+      "method": [
+        [
+          "GET",
+          2
+        ],
+        [
+          "POST",
+          2
+        ],
+        [
+          "HEAD",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          4
+        ],
+        [
+          "302",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "python-requests/2.18.4",
+          5
+        ]
+      ],
+      "path": [
+        [
+          "/login.php",
+          2
+        ],
+        [
+          "/turba/add.php",
+          2
+        ],
+        [
+          "/static/evil.php",
+          1
+        ]
+      ]
+    },
+    "mail-curl": {
+      "method": [
+        [
+          "GET",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "curl/7.58.0",
+          1
+        ]
+      ],
+      "path": [
+        [
+          "/static/evil.php",
+          1
+        ]
+      ]
+    }
+  }
+}

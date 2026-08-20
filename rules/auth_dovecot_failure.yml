@@ -1,0 +1,31 @@
+title: Dovecot Authentication Failure
+id: 1baf9f4f-a76b-49f6-b287-831c1eab07b2
+status: experimental
+description: Detects a Dovecot PAM authentication failure as a seed for brute-force correlation.
+author: Agentic SOC Detection Team
+date: 2026-08-21
+references:
+    - https://zenodo.org/records/3723083
+logsource:
+    category: authentication
+    product: linux
+    service: auth
+detection:
+    selection_failure:
+        event.action: 'authentication_failure'
+        event.outcome: 'failure'
+        auth.service: 'dovecot'
+    condition: selection_failure
+fields:
+    - user.name
+    - auth.ruser
+    - auth.rhost
+    - source.ip
+falsepositives:
+    - A user mistyping a password; this event rule requires a later time-window correlation rule
+level: low
+tags:
+    - attack.credential-access
+    - attack.t1110
+x_aitlds_labels:
+    - hydra

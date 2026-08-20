@@ -1,0 +1,9 @@
+{
+  "input": "data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+  "output": "reports/normalized_samples/apache_first_20.jsonl",
+  "log_type": "apache",
+  "processed_events": 20,
+  "parse_failures": 0,
+  "runtime_seconds": 0.0038028999988455325,
+  "events_per_second": 5259.144338812883
+}

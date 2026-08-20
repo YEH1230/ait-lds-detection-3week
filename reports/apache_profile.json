@@ -1,0 +1,381 @@
+{
+  "input": {
+    "log": "3week/data/aitlds_sample/data/mail.cup.com/apache2/mail.cup.com-access.log",
+    "labels": "3week/data/aitlds_sample/labels/mail.cup.com/apache2/mail.cup.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "total": 148534,
+  "parse_failures": 0,
+  "parse_failure_examples": [],
+  "label_counts": {
+    "0": 141903,
+    "nikto": 6295,
+    "hydra": 329,
+    "upload": 5,
+    "webshell-id": 1,
+    "mail-curl": 1
+  },
+  "top_features_by_label": {
+    "0": {
+      "method": [
+        [
+          "GET",
+          83982
+        ],
+        [
+          "POST",
+          51573
+        ],
+        [
+          "OPTIONS",
+          6346
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          130212
+        ],
+        [
+          "302",
+          10573
+        ],
+        [
+          "304",
+          1116
+        ],
+        [
+          "408",
+          2
+        ]
+      ],
+      "user_agent": [
+        [
+          "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0",
+          80396
+        ],
+        [
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36",
+          55159
+        ],
+        [
+          "Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)",
+          6346
+        ],
+        [
+          "-",
+          2
+        ]
+      ],
+      "path": [
+        [
+          "/services/portal/",
+          20391
+        ],
+        [
+          "/mnemo/memo.php",
+          8006
+        ],
+        [
+          "/services/ajax.php/kronolith/listEvents",
+          7396
+        ],
+        [
+          "*",
+          6346
+        ],
+        [
+          "/imp/dynamic.php",
+          5934
+        ],
+        [
+          "/services/prefs.php",
+          5701
+        ],
+        [
+          "/nag/",
+          4952
+        ],
+        [
+          "/nag/task.php",
+          4745
+        ],
+        [
+          "/nag/task/save.php",
+          4745
+        ],
+        [
+          "/nag/list.php",
+          4745
+        ],
+        [
+          "/services/ajax.php/horde/imple",
+          4525
+        ],
+        [
+          "/mnemo/",
+          4098
+        ]
+      ]
+    },
+    "nikto": {
+      "method": [
+        [
+          "GET",
+          6269
+        ],
+        [
+          "POST",
+          11
+        ],
+        [
+          "OPTIONS",
+          3
+        ],
+        [
+          "TRACE",
+          2
+        ],
+        [
+          "TRACK",
+          2
+        ],
+        [
+          "HEAD",
+          1
+        ],
+        [
+          "PUT",
+          1
+        ],
+        [
+          "DEBUG",
+          1
+        ],
+        [
+          "PROPFIND",
+          1
+        ],
+        [
+          "get",
+          1
+        ],
+        [
+          "INDEX",
+          1
+        ],
+        [
+          "SEARCH",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "400",
+          6295
+        ]
+      ],
+      "user_agent": [
+        [
+          "-",
+          6295
+        ]
+      ],
+      "path": [
+        [
+          "/index.php",
+          160
+        ],
+        [
+          "/",
+          72
+        ],
+        [
+          "/forum1_professionnel.asp",
+          33
+        ],
+        [
+          "/modules.php",
+          31
+        ],
+        [
+          "/forum1.asp",
+          23
+        ],
+        [
+          "/config.php",
+          12
+        ],
+        [
+          "/forum_professionnel.asp",
+          12
+        ],
+        [
+          "/rubrique.asp",
+          12
+        ],
+        [
+          "/forum-ra_professionnel.asp",
+          11
+        ],
+        [
+          "/forum.asp",
+          11
+        ],
+        [
+          "/forum_arc.asp",
+          11
+        ],
+        [
+          "/imprimer.asp",
+          11
+        ]
+      ]
+    },
+    "hydra": {
+      "method": [
+        [
+          "GET",
+          144
+        ],
+        [
+          "POST",
+          144
+        ],
+        [
+          "OPTIONS",
+          41
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          328
+        ],
+        [
+          "302",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "Mozilla/5.0 (Hydra)",
+          288
+        ],
+        [
+          "Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)",
+          41
+        ]
+      ],
+      "path": [
+        [
+          "/login.php",
+          288
+        ],
+        [
+          "*",
+          41
+        ]
+      ]
+    },
+    "upload": {
+      "method": [
+        [
+          "GET",
+          2
+        ],
+        [
+          "POST",
+          2
+        ],
+        [
+          "HEAD",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          4
+        ],
+        [
+          "302",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "python-requests/2.18.4",
+          5
+        ]
+      ],
+      "path": [
+        [
+          "/login.php",
+          2
+        ],
+        [
+          "/turba/add.php",
+          2
+        ],
+        [
+          "/static/evil.php",
+          1
+        ]
+      ]
+    },
+    "webshell-id": {
+      "method": [
+        [
+          "GET",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 HeadlessChrome/77.0.3865.90 Safari/537.36",
+          1
+        ]
+      ],
+      "path": [
+        [
+          "/mnemo/",
+          1
+        ]
+      ]
+    },
+    "mail-curl": {
+      "method": [
+        [
+          "GET",
+          1
+        ]
+      ],
+      "status": [
+        [
+          "200",
+          1
+        ]
+      ],
+      "user_agent": [
+        [
+          "curl/7.58.0",
+          1
+        ]
+      ],
+      "path": [
+        [
+          "/static/evil.php",
+          1
+        ]
+      ]
+    }
+  }
+}

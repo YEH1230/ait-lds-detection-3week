@@ -1,0 +1,47 @@
+[
+  {
+    "id": "c6b3607b-f743-4f75-a090-d12f8e8c7521",
+    "title": "Automated Horde Webshell Upload Sequence",
+    "version": "24c44157c6ff",
+    "path": "rules/apache_automated_webshell_upload.yml",
+    "target_labels": [
+      "upload"
+    ]
+  },
+  {
+    "id": "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17",
+    "title": "Apache Hydra Login Client",
+    "version": "3f2c6678fb3d",
+    "path": "rules/apache_hydra_login.yml",
+    "target_labels": [
+      "hydra"
+    ]
+  },
+  {
+    "id": "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad",
+    "title": "Apache Nikto-Style Malformed Request",
+    "version": "59ebd8990ea8",
+    "path": "rules/apache_nikto_scan.yml",
+    "target_labels": [
+      "nikto"
+    ]
+  },
+  {
+    "id": "005e6bf9-f9ac-4be3-91e7-f32a71637a33",
+    "title": "Webshell Command in HTTP Query",
+    "version": "762d1e6d9001",
+    "path": "rules/apache_webshell_command.yml",
+    "target_labels": [
+      "mail-curl"
+    ]
+  },
+  {
+    "id": "1baf9f4f-a76b-49f6-b287-831c1eab07b2",
+    "title": "Dovecot Authentication Failure",
+    "version": "fc93f0c9a2fa",
+    "path": "rules/auth_dovecot_failure.yml",
+    "target_labels": [
+      "hydra"
+    ]
+  }
+]

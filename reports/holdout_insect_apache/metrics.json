@@ -1,0 +1,354 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.insect.com/apache2/mail.insect.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "processed_events": 169340,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 162852,
+    "nikto": 6296,
+    "hydra": 186,
+    "upload": 5,
+    "mail-curl": 1
+  },
+  "overall": {
+    "tp": 267,
+    "fp": 0,
+    "fn": 6221,
+    "tn": 162852,
+    "precision": 1.0,
+    "recall": 0.04115289765721332,
+    "f1": 0.07905255366395263,
+    "false_positive_rate": 0.0
+  },
+  "per_rule": {
+    "c6b3607b-f743-4f75-a090-d12f8e8c7521": {
+      "title": "Automated Horde Webshell Upload Sequence",
+      "target_labels": [
+        "upload"
+      ],
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 169335,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17": {
+      "title": "Apache Hydra Login Client",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 180,
+      "fp": 0,
+      "fn": 6,
+      "tn": 169154,
+      "precision": 1.0,
+      "recall": 0.967741935483871,
+      "f1": 0.9836065573770492,
+      "false_positive_rate": 0.0
+    },
+    "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad": {
+      "title": "Apache Nikto-Style Malformed Request",
+      "target_labels": [
+        "nikto"
+      ],
+      "tp": 81,
+      "fp": 0,
+      "fn": 6215,
+      "tn": 163044,
+      "precision": 1.0,
+      "recall": 0.01286531130876747,
+      "f1": 0.02540379488787831,
+      "false_positive_rate": 0.0
+    },
+    "005e6bf9-f9ac-4be3-91e7-f32a71637a33": {
+      "title": "Webshell Command in HTTP Query",
+      "target_labels": [
+        "mail-curl"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 169339,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "runtime_seconds": 9.777154199999131,
+  "events_per_second": 17319.968217338235,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118551,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:29 +0000] \"HEAD /./ HTTP/1.1\" 302 512 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:Port Check)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118552,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:29 +0000] \"GET /./ HTTP/1.1\" 302 553 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:getinfo)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118553,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:29 +0000] \"GET /./ HTTP/1.1\" 302 553 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118554,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:29 +0000] \"GET /./7EA8mJER.cgi HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118555,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.mdb HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118556,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.UploadServlet HTTP/1.1\" 302 666 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118557,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.shtm HTTP/1.1\" 302 657 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118558,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.php+ HTTP/1.1\" 302 661 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118559,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.thtml HTTP/1.1\" 302 658 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118560,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.axd HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118561,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:30 +0000] \"GET /./7EA8mJER.btr HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118562,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.nsfdeslo HTTP/1.1\" 302 661 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118563,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.Big5 HTTP/1.1\" 302 657 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118564,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.genpopuplist HTTP/1.1\" 302 665 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118565,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.home HTTP/1.1\" 302 657 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118566,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.xbb HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118567,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.pt HTTP/1.1\" 302 655 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118568,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:31 +0000] \"GET /./7EA8mJER.TPF HTTP/1.1\" 302 656 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118569,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:32 +0000] \"GET /./7EA8mJER.ml HTTP/1.1\" 302 655 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/apache2/mail.insect.com-access.log",
+      "line_no": 118570,
+      "label": {
+        "time_window": "nikto",
+        "similarity_order": "nikto",
+        "policy": "event",
+        "selected": "nikto",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "192.168.10.18 - - [04/Mar/2020:13:54:32 +0000] \"GET /./7EA8mJER.cobalt HTTP/1.1\" 302 659 \"-\" \"Mozilla/5.00 (Nikto/2.1.5) (Evasions:2) (Test:map_codes)\""
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

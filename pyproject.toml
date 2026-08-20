@@ -1,0 +1,10 @@
+[project]
+name = "aitlds-detection-poc"
+version = "0.1.0"
+description = "AIT-LDS v1.0 normalization and Sigma-subset detection PoC"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0,<7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

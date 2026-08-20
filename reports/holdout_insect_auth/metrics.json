@@ -1,0 +1,349 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.insect.com/auth.log",
+    "labels": "data/aitlds_sample/labels/mail.insect.com/auth.log",
+    "log_type": "auth",
+    "label_policy": "event"
+  },
+  "processed_events": 1134,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 956,
+    "hydra": 178
+  },
+  "overall": {
+    "tp": 178,
+    "fp": 34,
+    "fn": 0,
+    "tn": 922,
+    "precision": 0.839622641509434,
+    "recall": 1.0,
+    "f1": 0.9128205128205129,
+    "false_positive_rate": 0.03556485355648536
+  },
+  "per_rule": {
+    "1baf9f4f-a76b-49f6-b287-831c1eab07b2": {
+      "title": "Dovecot Authentication Failure",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 178,
+      "fp": 34,
+      "fn": 0,
+      "tn": 922,
+      "precision": 0.839622641509434,
+      "recall": 1.0,
+      "f1": 0.9128205128205129,
+      "false_positive_rate": 0.03556485355648536
+    }
+  },
+  "runtime_seconds": 0.04557060000115598,
+  "events_per_second": 24884.464983371603,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 45,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 06:40:37 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 46,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 06:40:45 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 109,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 17:06:54 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=marcelle rhost=127.0.0.1  user=marcelle"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 110,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 17:07:03 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=marcelle rhost=127.0.0.1  user=marcelle"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 129,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 20:01:36 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 130,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 20:01:44 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 149,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 22:47:43 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 150,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Feb 29 22:47:51 mail-2 auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 211,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 08:02:53 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 212,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 08:03:01 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 217,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 08:27:34 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 218,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 08:27:42 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 287,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:36:26 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=long rhost=127.0.0.1  user=long"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 288,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:36:34 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=long rhost=127.0.0.1  user=long"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 291,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:57:43 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=keven rhost=127.0.0.1  user=keven"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 292,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  1 19:57:51 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=keven rhost=127.0.0.1  user=keven"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 393,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 12:04:55 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=marjory rhost=127.0.0.1  user=marjory"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 394,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  2 12:05:03 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=marjory rhost=127.0.0.1  user=marjory"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 525,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 09:11:43 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    },
+    {
+      "file": "data/aitlds_sample/data/mail.insect.com/auth.log",
+      "line_no": 526,
+      "label": {
+        "time_window": "0",
+        "similarity_order": "0",
+        "policy": "event",
+        "selected": "0",
+        "is_attack": false
+      },
+      "predicted_rule_ids": [
+        "1baf9f4f-a76b-49f6-b287-831c1eab07b2"
+      ],
+      "raw_line": "Mar  3 09:11:51 mail auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=violet rhost=127.0.0.1  user=violet"
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}

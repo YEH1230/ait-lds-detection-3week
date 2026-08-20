@@ -1,0 +1,107 @@
+{
+  "input": {
+    "log": "data/aitlds_sample/data/mail.onion.com/apache2/mail.onion.com-access.log",
+    "labels": "data/aitlds_sample/labels/mail.onion.com/apache2/mail.onion.com-access.log",
+    "log_type": "apache",
+    "label_policy": "event"
+  },
+  "processed_events": 81963,
+  "parse_failures": 0,
+  "selected_label_counts": {
+    "0": 75565,
+    "nikto": 6295,
+    "hydra": 97,
+    "upload": 5,
+    "mail-curl": 1
+  },
+  "overall": {
+    "tp": 6397,
+    "fp": 0,
+    "fn": 1,
+    "tn": 75565,
+    "precision": 1.0,
+    "recall": 0.9998437011566115,
+    "f1": 0.9999218444704963,
+    "false_positive_rate": 0.0
+  },
+  "per_rule": {
+    "c6b3607b-f743-4f75-a090-d12f8e8c7521": {
+      "title": "Automated Horde Webshell Upload Sequence",
+      "target_labels": [
+        "upload"
+      ],
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 81958,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "28a13cf7-d4b1-4a1d-9d78-6d455b6d7f17": {
+      "title": "Apache Hydra Login Client",
+      "target_labels": [
+        "hydra"
+      ],
+      "tp": 96,
+      "fp": 0,
+      "fn": 1,
+      "tn": 81866,
+      "precision": 1.0,
+      "recall": 0.9896907216494846,
+      "f1": 0.9948186528497409,
+      "false_positive_rate": 0.0
+    },
+    "4b5eb396-4a7a-47f5-8bf8-75e3c4aec0ad": {
+      "title": "Apache Nikto Scanner Activity",
+      "target_labels": [
+        "nikto"
+      ],
+      "tp": 6295,
+      "fp": 0,
+      "fn": 0,
+      "tn": 75668,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "005e6bf9-f9ac-4be3-91e7-f32a71637a33": {
+      "title": "Webshell Command in HTTP Query",
+      "target_labels": [
+        "mail-curl"
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 81962,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    }
+  },
+  "runtime_seconds": 5.044090100000176,
+  "events_per_second": 16249.313230942711,
+  "error_examples": [
+    {
+      "file": "data/aitlds_sample/data/mail.onion.com/apache2/mail.onion.com-access.log",
+      "line_no": 59470,
+      "label": {
+        "time_window": "hydra",
+        "similarity_order": "hydra",
+        "policy": "event",
+        "selected": "hydra",
+        "is_attack": true
+      },
+      "predicted_rule_ids": [],
+      "raw_line": "::1 - - [04/Mar/2020:18:51:52 +0000] \"OPTIONS * HTTP/1.0\" 200 110 \"-\" \"Apache/2.4.25 (Debian) OpenSSL/1.0.2u (internal dummy connection)\""
+    }
+  ],
+  "notes": [
+    "Metrics are event/line-level, not attack-chain-level.",
+    "AIT-LDS labels are automatically generated and were not manually corrected.",
+    "Default event policy uses the second similarity/order label column."
+  ]
+}
